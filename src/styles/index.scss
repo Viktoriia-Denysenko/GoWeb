@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+@import './base/modernnormalize';
+@import './base/reset';
+@import './base/container';
+@import './base/body';
+@import './utils/variables';
+@import './utils/extend';
+@import './components/header';
+@import './components/about';
+@import './components/cases';
+@import './components/blog';
+@import './components/team';
+@import './components/contacts';
+@import './components/footer';
+@import './libraries/lightbox.css';

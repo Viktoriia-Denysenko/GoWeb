@@ -1,0 +1,203 @@
+.team {
+  &__wrapper {
+    padding: 40px 20px;
+  }
+
+  &__img {
+    @extend .img;
+  }
+
+  &__subtitle {
+    @extend .subtitle;
+    text-align: center;
+    color: $main-dark-text-color;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @extend .title;
+    text-align: center;
+    color: $main-dark-text-color;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    @extend .desc;
+    text-align: center;
+    color: $main-dark-text-color;
+    margin-bottom: 20px;
+  }
+}
+
+.team__box {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+
+  &:hover .overlay__link-items {
+    opacity: 1;
+  }
+}
+
+.team__img-wrapper {
+  position: relative;
+  transition: all 500ms linear;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 18px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 250ms linear;
+
+  &__link-items {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 250ms linear;
+  }
+
+  &__link-item {
+    @extend .social-media-link-item;
+  }
+
+  &__icon {
+    @extend .social-media-link-icon;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.team__team-member-info {
+  text-align: center;
+}
+
+.team__team-member-name {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 29px;
+  text-align: center;
+  color: $main-dark-text-color;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.team__team-member-position {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: $main-dark-text-color;
+}
+
+// --------------------TABLET---------------------------
+@media screen and (min-width: $tablet) {
+  .team {
+    &__wrapper {
+      padding: 40px 32px;
+    }
+
+    &__subtitle {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__desc {
+      font-size: 17px;
+      margin-bottom: 24px;
+    }
+
+    &__boxes {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__box {
+      flex-basis: calc(33.33% - 12px);
+      margin-right: 18px;
+      margin-bottom: 0;
+
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
+    }
+
+    &__team-member-name {
+      font-size: 25px;
+      line-height: 32px;
+      margin-top: 14px;
+    }
+
+    &__team-member-position {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .overlay {
+    &__link-item {
+      margin-right: 14px;
+    }
+  }
+}
+
+// --------------------DESKTOP---------------------------
+@media screen and (min-width: $desktop) {
+  .team {
+    &__wrapper {
+      padding: 80px 30px 80px 28px;
+    }
+
+    &__desc {
+      font-size: 18px;
+    }
+
+    &__box {
+      flex-basis: calc(33.33% - 13.33px);
+      margin-right: 20px;
+    }
+
+    &__team-member-name {
+      margin-top: 20px;
+    }
+
+    .overlay {
+      &__link-item {
+        margin-right: 25px;
+        width: 55px;
+        height: 55px;
+      }
+      &__icon {
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+}

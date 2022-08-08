@@ -1,0 +1,102 @@
+// --------------------MOBILE---------------------------
+.cases__wrapper {
+  padding: 40px 20px;
+}
+
+.cases {
+  &__img {
+    @extend .img;
+    width: 100%;
+  }
+  &__pictures-item {
+    margin-bottom: 8px;
+    transform: all 500ms linear;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  &__subtitle {
+    @extend .subtitle;
+    text-align: center;
+    color: $main-dark-text-color;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @extend .title;
+    text-align: center;
+    color: $main-dark-text-color;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    @extend .desc;
+    text-align: center;
+    color: $main-dark-text-color;
+    margin-bottom: 20px;
+  }
+}
+
+// --------------------TABLET---------------------------
+@media screen and (min-width: $tablet) {
+  .cases__wrapper {
+    padding: 40px 32px;
+  }
+
+  .cases {
+    &__pictures-items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__pictures-item {
+      margin-bottom: 0;
+      flex-basis: calc(33.33% - 12px);
+      margin-right: 18px;
+
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
+
+      &:nth-child(-n + 3) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__desc {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+// --------------------DESKTOP---------------------------
+@media screen and (min-width: $desktop) {
+  .cases__wrapper {
+    padding: 80px 28px;
+  }
+
+  .cases {
+    &__pictures-item {
+      flex-basis: calc(33.33% - 14px);
+      margin-right: 21px;
+
+      &:nth-child(-n + 3) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

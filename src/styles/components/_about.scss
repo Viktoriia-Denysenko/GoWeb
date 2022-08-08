@@ -1,0 +1,71 @@
+// --------------------MOBILE---------------------------
+.about__text-wrapper {
+  background-color: $main-green-color;
+  padding: 40px 30px;
+}
+
+.about {
+  &__img {
+    @extend .img;
+  }
+  &__subtitle {
+    @extend .subtitle;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__desc {
+    @extend .desc;
+  }
+  &__btn {
+    @extend .btn;
+    display: inline-block;
+    border: 1px solid $main-light-text-color;
+    padding: 10px 36px;
+    transition: background-color 250ms linear, color 250ms linear;
+
+    &:hover {
+      background-color: $main-light-text-color;
+      color: $main-green-color;
+    }
+  }
+}
+
+// --------------------TABLET---------------------------
+@media screen and (min-width: $tablet) {
+  .about {
+    &__img {
+      width: 368px;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+    &__text-wrapper {
+      padding: 40px 53px 40px 32px;
+    }
+    &__title {
+      padding-right: 100px;
+    }
+  }
+}
+
+// --------------------DESKTOP---------------------------
+@media screen and (min-width: $desktop) {
+  .about {
+    &__img {
+      width: 670px;
+    }
+    &__text-wrapper {
+      padding: 80px 64px 80px 20px;
+    }
+    &__title {
+      padding-right: 0;
+    }
+    &__btn {
+      padding: 11px 35px 12px 34px;
+    }
+  }
+}

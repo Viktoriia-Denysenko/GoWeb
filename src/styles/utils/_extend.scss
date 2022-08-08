@@ -1,0 +1,98 @@
+// --------------------MOBILE---------------------------
+.logo-text {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.subtitle {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: $main-light-text-color;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 48px;
+  color: $main-light-text-color;
+  margin-bottom: 24px;
+}
+
+.desc {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: $main-light-text-color;
+  margin-bottom: 24px;
+}
+
+.btn {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 5px;
+  background-color: $main-green-color;
+  cursor: pointer;
+  color: $main-light-text-color;
+  border: none;
+}
+
+.social-media-link-item {
+  margin-right: 25px;
+  width: 35px;
+  height: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-media-link-icon {
+  fill: $main-light-text-color;
+  width: 35px;
+  height: 35px;
+  transition: all 250ms linear;
+}
+
+// --------------------TABLET---------------------------
+@media screen and (min-width: $tablet) {
+  .logo-text {
+    font-size: 35px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    line-height: 33px;
+  }
+
+  .desc {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .btn {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+// --------------------DESKTOP---------------------------

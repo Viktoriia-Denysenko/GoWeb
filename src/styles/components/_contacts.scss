@@ -1,0 +1,110 @@
+// --------------------MOBILE---------------------------
+.contacts {
+  &__img {
+    @extend .img;
+  }
+}
+
+.form {
+  background-color: $form-bg-color;
+  padding: 40px 20px;
+
+  &__title {
+    @extend .title;
+    color: $main-dark-text-color;
+    margin-bottom: 0;
+  }
+
+  &__input {
+    width: 280px;
+    height: 40px;
+    background-color: $main-light-text-color;
+    border: 1px solid $main-border-color;
+    margin-top: 32px;
+    padding-left: 8px;
+
+    &::placeholder {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 23px;
+      color: $input-text-color;
+    }
+  }
+
+  &__btn {
+    @extend .btn;
+    text-align: center;
+    padding: 10px 115px;
+    margin: 40px auto 0 auto;
+    transition: all 250ms linear;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+// --------------------TABLET---------------------------
+@media screen and (min-width: $tablet) {
+  .contacts {
+    margin-bottom: 40px;
+
+    &__img {
+      width: 368px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .form {
+    padding: 40px 32px;
+
+    &__input {
+      width: 324px;
+
+      &::placeholder {
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
+
+    &__btn {
+      padding: 8px 146px;
+    }
+  }
+}
+
+// --------------------DESKTOP---------------------------
+@media screen and (min-width: $desktop) {
+  .contacts {
+    margin-bottom: 0;
+
+    &__img {
+      width: 670px;
+    }
+  }
+
+  .form {
+    padding: 80px 20px;
+
+    &__input {
+      width: 620px;
+
+      &::placeholder {
+        line-height: 28px;
+      }
+    }
+
+    &__btn {
+      padding: 8px 295px;
+      margin: 60px auto 0 auto;
+    }
+  }
+}

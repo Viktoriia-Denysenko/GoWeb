@@ -1,0 +1,40 @@
+<section class="contacts" id="contacts">
+  <div class="container contacts__wrapper">
+    <picture>
+      <source
+        srcset="../images/home/contact.webp 1x, ../images/home/contact@2x.webp 2x"
+        type="image/webp"
+      />
+      <source
+        srcset="../images/home/contact.jpg 1x, ../images/home/contact@2x.jpg 2x"
+        type="image/jpeg"
+      />
+      <img
+        class="contacts__img"
+        src="../images/home/contact.jpg"
+        alt="Working team member"
+      />
+    </picture>
+    <form class="form" name="signup_form" autocomplete="on" novalidate>
+      <h2 class="form__title">Request Callback</h2>
+
+      <input
+        class="form__input"
+        type="text"
+        name="name"
+        placeholder="Enter your name"
+        required
+      />
+
+      <input
+        class="form__input"
+        type="email"
+        name="email"
+        placeholder="Enter email*"
+        required
+      />
+
+      <button class="form__btn" type="submit">Send</button>
+    </form>
+  </div>
+</section>
