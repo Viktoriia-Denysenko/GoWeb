@@ -15,7 +15,8 @@
     margin-bottom: 0;
   }
 
-  &__input {
+  &__input-name,
+  &__input-email {
     width: 280px;
     height: 40px;
     background-color: $main-light-text-color;
@@ -44,6 +45,25 @@
       opacity: 0.85;
     }
   }
+
+  &__notification {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+    margin-top: 10px;
+    color: #ff0000;
+
+    &::before {
+      margin-right: 5px;
+      content: url('../images/form/worning.svg');
+    }
+
+    &.is-hidden {
+      visibility: hidden;
+    }
+  }
 }
 
 // --------------------TABLET---------------------------
@@ -66,7 +86,8 @@
   .form {
     padding: 40px 32px;
 
-    &__input {
+    &__input-name,
+    &__input-email {
       width: 324px;
 
       &::placeholder {
@@ -94,7 +115,8 @@
   .form {
     padding: 80px 20px;
 
-    &__input {
+    &__input-name,
+    &__input-email {
       width: 620px;
 
       &::placeholder {

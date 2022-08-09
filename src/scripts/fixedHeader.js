@@ -4,8 +4,6 @@ let scrollPos;
 export default function scrollFunction() {
   scrollPos = masthead.offsetHeight;
   let scrolled = window.scrollY;
-  console.log(scrollPos);
-  console.log(scrolled);
 
   if (scrolled >= scrollPos) {
     masthead.classList.add('active');
@@ -13,3 +11,7 @@ export default function scrollFunction() {
     masthead.classList.remove('active');
   }
 }
+
+window.onscroll = function () {
+  scrollFunction();
+};
