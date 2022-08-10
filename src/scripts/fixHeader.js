@@ -1,7 +1,7 @@
 const masthead = document.querySelector('.masthead__wrapper');
 let scrollPos;
 
-export default function scrollFunction() {
+export default function fixHeader() {
   scrollPos = masthead.offsetHeight;
   let scrolled = window.scrollY;
 
@@ -13,5 +13,5 @@ export default function scrollFunction() {
 }
 
 window.onscroll = function () {
-  scrollFunction();
+  fixHeader();
 };

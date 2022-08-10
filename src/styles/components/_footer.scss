@@ -2,13 +2,16 @@
 .footer {
   background-color: $main-dark-text-color;
   padding: 20px 33px;
+
   &__link-items {
     display: flex;
     justify-content: center;
   }
+
   &__link-item {
     @extend .social-media-link-item;
   }
+
   &__icon {
     @extend .social-media-link-icon;
 
@@ -16,6 +19,7 @@
       fill: $main-green-color;
     }
   }
+  
   &__text {
     @extend .desc;
     text-align: center;

@@ -1,6 +1,6 @@
 const form = document.querySelector('.form');
-const formInputName = document.querySelector('.form__input-name');
-const formInputEmail = document.querySelector('.form__input-email');
+const formInputName = document.querySelector('.input__input-name');
+const formInputEmail = document.querySelector('.input__input-email');
 const formNotification = document.querySelector('.form__notification');
 
 form.addEventListener('submit', onFormSubmit);

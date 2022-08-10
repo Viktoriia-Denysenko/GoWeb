@@ -62,23 +62,22 @@
     z-index: 2;
   }
 
-  &__link {
-    margin-right: 5px;
-  }
   &__icon {
+    vertical-align: text-bottom;
+    margin-right: 5px;
     width: 39px;
     height: 31px;
   }
-}
 
-.logo__first-word {
-  @extend .logo-text;
-  color: $main-green-color;
-}
+  &__first-word {
+    @extend .logo-text;
+    color: $main-green-color;
+  }
 
-.logo__second-word {
-  @extend .logo-text;
-  color: $main-light-text-color;
+  &__second-word {
+    @extend .logo-text;
+    color: $main-light-text-color;
+  }
 }
 
 .navigation {
@@ -175,6 +174,7 @@
       padding: 1px 32px 0 32px;
     }
   }
+
   .masthead__wrapper {
     width: calc(768px - 64px);
     height: 70px;
@@ -195,7 +195,7 @@
     margin-bottom: 0;
     padding-left: 0;
 
-    &__link {
+    &__icon {
       margin-right: 10px;
     }
   }

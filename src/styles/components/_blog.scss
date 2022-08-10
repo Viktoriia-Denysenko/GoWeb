@@ -1,14 +1,15 @@
 // --------------------MOBILE---------------------------
-.blog__text-wrapper {
-  background-color: $blog-bg-color;
-  padding: 40px 20px;
-  height: auto;
-}
-
 .blog {
+  &__text-wrapper {
+    background-color: $blog-bg-color;
+    padding: 40px 20px;
+    height: auto;
+  }
+
   &__img {
     @extend .img;
   }
+
   &__data {
     @extend .subtitle;
   }
@@ -43,14 +44,17 @@
       display: flex;
       flex-direction: row-reverse;
     }
+
     &__text-wrapper {
       padding: 40px 53px 40px 32px;
     }
+
     &__img {
       width: 368px;
       height: 100%;
       object-fit: cover;
     }
+
     &__btn {
       padding: 11px 31px 10px 42px;
     }
@@ -64,9 +68,11 @@
       width: 670px;
       height: auto;
     }
+
     &__text-wrapper {
       padding: 80px 56px 80px 28px;
     }
+
     &__btn {
       padding: 10px 36px 11px 37px;
     }

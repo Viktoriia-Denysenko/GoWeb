@@ -15,25 +15,6 @@
     margin-bottom: 0;
   }
 
-  &__input-name,
-  &__input-email {
-    width: 280px;
-    height: 40px;
-    background-color: $main-light-text-color;
-    border: 1px solid $main-border-color;
-    margin-top: 32px;
-    padding-left: 8px;
-
-    &::placeholder {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 23px;
-      color: $input-text-color;
-    }
-  }
-
   &__btn {
     @extend .btn;
     text-align: center;
@@ -66,6 +47,53 @@
   }
 }
 
+.input {
+  &__box {
+    position: relative;
+    transition: all 500ms linear;
+    z-index: 2;
+  }
+
+  &__input-name,
+  &__input-email {
+    width: 280px;
+    height: 40px;
+    background-color: $main-light-text-color;
+    border: 1px solid $main-border-color;
+    margin-top: 32px;
+    padding-left: 8px;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: $input-text-color;
+    transform: translateY(40px);
+    top: 0;
+    left: 5px;
+    transition: all 500ms linear;
+    cursor: text;
+    z-index: 1;
+  }
+
+  &__input-name:focus ~ &__label,
+  &__input-email:focus ~ &__label,
+  &__input-name:not(:placeholder-shown).input__input-name:not(:focus)
+    ~ &__label,
+  &__input-email:not(:placeholder-shown).input__input-email:not(:focus)
+    ~ &__label {
+    top: -33px;
+  }
+}
+
 // --------------------TABLET---------------------------
 @media screen and (min-width: $tablet) {
   .contacts {
@@ -86,18 +114,19 @@
   .form {
     padding: 40px 32px;
 
+    &__btn {
+      padding: 8px 146px;
+    }
+  }
+
+  .input {
     &__input-name,
     &__input-email {
       width: 324px;
-
-      &::placeholder {
-        font-size: 18px;
-        line-height: 23px;
-      }
     }
-
-    &__btn {
-      padding: 8px 146px;
+    &__label {
+      font-size: 18px;
+      line-height: 23px;
     }
   }
 }
@@ -115,18 +144,19 @@
   .form {
     padding: 80px 20px;
 
-    &__input-name,
-    &__input-email {
-      width: 620px;
-
-      &::placeholder {
-        line-height: 28px;
-      }
-    }
-
     &__btn {
       padding: 8px 295px;
       margin: 60px auto 0 auto;
+    }
+  }
+
+  .input {
+    &__input-name,
+    &__input-email {
+      width: 620px;
+    }
+    &__label {
+      line-height: 28px;
     }
   }
 }
