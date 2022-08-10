@@ -48,24 +48,26 @@
 }
 
 .input {
-  &__box {
-    position: relative;
-    transition: all 500ms linear;
-    z-index: 2;
+  width: 280px;
+  height: 40px;
+  background-color: $main-light-text-color;
+  border: 1px solid $main-border-color;
+  margin-top: 32px;
+  padding-left: 8px;
+  outline: none;
+
+  &::placeholder {
+    color: transparent;
   }
 
-  &__input-name,
-  &__input-email {
-    width: 280px;
-    height: 40px;
-    background-color: $main-light-text-color;
-    border: 1px solid $main-border-color;
-    margin-top: 32px;
-    padding-left: 8px;
+  &:focus ~ &__label,
+  &:not(:placeholder-shown).input:not(:focus) ~ &__label,
+  &:not(:placeholder-shown).input:not(:focus) ~ &__label {
+    top: -33px;
+  }
 
-    &::placeholder {
-      color: transparent;
-    }
+  &__box {
+    position: relative;
   }
 
   &__label {
@@ -76,21 +78,11 @@
     font-size: 16px;
     line-height: 16px;
     color: $input-text-color;
-    transform: translateY(40px);
+    transform: translateY(43px);
     top: 0;
-    left: 5px;
+    left: 8px;
     transition: all 500ms linear;
     cursor: text;
-    z-index: 1;
-  }
-
-  &__input-name:focus ~ &__label,
-  &__input-email:focus ~ &__label,
-  &__input-name:not(:placeholder-shown).input__input-name:not(:focus)
-    ~ &__label,
-  &__input-email:not(:placeholder-shown).input__input-email:not(:focus)
-    ~ &__label {
-    top: -33px;
   }
 }
 
@@ -120,13 +112,12 @@
   }
 
   .input {
-    &__input-name,
-    &__input-email {
-      width: 324px;
-    }
+    width: 324px;
+
     &__label {
       font-size: 18px;
       line-height: 23px;
+      transform: translateY(40px);
     }
   }
 }
@@ -151,10 +142,8 @@
   }
 
   .input {
-    &__input-name,
-    &__input-email {
-      width: 620px;
-    }
+    width: 620px;
+
     &__label {
       line-height: 28px;
     }

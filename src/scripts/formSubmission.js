@@ -1,6 +1,5 @@
 const form = document.querySelector('.form');
-const formInputName = document.querySelector('.input__input-name');
-const formInputEmail = document.querySelector('.input__input-email');
+const formInput = document.querySelectorAll('.input');
 const formNotification = document.querySelector('.form__notification');
 
 form.addEventListener('submit', onFormSubmit);
@@ -17,11 +16,12 @@ export function onFormSubmit(event) {
   }
 }
 
-formInputName.addEventListener('change', onInputChange);
-formInputEmail.addEventListener('change', onInputChange);
+for (let i = 0; i < formInput.length; i += 1) {
+  formInput[i].addEventListener('change', onInputChange);
+}
 
 export function onInputChange() {
-  if (formInputName.value != '' && formInputEmail.value != '') {
+  if (formInput.value != '') {
     formNotification.classList.add('is-hidden');
   }
 }
