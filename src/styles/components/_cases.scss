@@ -16,7 +16,8 @@
   &__pictures-item {
     transform: all 500ms linear;
 
-    &:hover {
+    &:hover,
+     &:focus {
       opacity: 0.85;
     }
   }

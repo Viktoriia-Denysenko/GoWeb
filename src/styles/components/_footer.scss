@@ -15,7 +15,8 @@
   &__icon {
     @extend .social-media-link-icon;
 
-    &:hover {
+    &:hover,
+     &:focus {
       fill: $main-green-color;
     }
   }
